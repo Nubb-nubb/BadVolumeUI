@@ -35,3 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
   volumeIndicator.innerHTML = initialVolume + '%';
   audioPlayer.volume = initialVolume / 100.0;
 });
+document.getElementById('sharkGraphic').addEventListener('click', function(event) {
+  const slider = document.getElementById('volumeControl');
+  const rect = slider.getBoundingClientRect();
+  const clickPos = (event.clientX - rect.left) / rect.width;
+  const volume = Math.round(clickPos * 100);
+  slider.value = volume;
+  document.getElementById('volumeIndicator').innerHTML = volume + '%';
+  // Adjust the audio player volume
+  document.getElementById('audioPlayer').volume = volume / 100.0;
+});

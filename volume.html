@@ -10,6 +10,10 @@
 </head>
 <body>
     <div class="volume-container">
+        <!-- Shark Graphic (hidden initially) -->
+        <div id="sharkGraphic" hidden>
+            <img src="images/Shark.png" alt="Shark">
+        </div>
         <!-- Play Button Container -->
         <div class="play-button-container">
         <button id="playPauseBtn"><i class="fas fa-play"></i></button>
@@ -20,7 +24,7 @@
         <input type="range" id="volumeControl" min="0" max="100" value="50">
         <div id="volumeIndicator">50%</div>
     </div>
-    <audio id="audioPlayer" controls autoplay loop hidden>
+    <audio id="audioPlayer" controls loop hidden>
         <source src="https://ia800509.us.archive.org/16/items/TobyFoxMegalovania/Toby%20Fox%20-%20Megalovania.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>

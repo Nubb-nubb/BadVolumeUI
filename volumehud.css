@@ -67,3 +67,12 @@ body, html {
 #playPauseBtn:focus {
   outline: none;
 }
+
+@keyframes growShrink {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+#sharkGraphic:hover {
+  animation: growShrink 1s infinite;
+}
