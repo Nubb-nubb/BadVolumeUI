@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Control</title>
+    <link rel="stylesheet" href="volumehud.css">
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="volume-container">
+        <!-- Play Button Container -->
+        <div class="play-button-container">
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        </div>
+        <!-- Volume Icon -->
+        <i class="fas fa-volume-up" id="volumeIcon"></i>
+        <!-- Volume Slider -->
+        <input type="range" id="volumeControl" min="0" max="100" value="50">
+        <div id="volumeIndicator">50%</div>
+    </div>
+    <audio id="audioPlayer" controls autoplay loop hidden>
+        <source src="https://ia800509.us.archive.org/16/items/TobyFoxMegalovania/Toby%20Fox%20-%20Megalovania.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="controller.js"></script>
+</body>
+</html>
