@@ -10,19 +10,21 @@
 </head>
 <body>
     <div class="volume-container">
+        <div class="play-button-container">
+            <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        </div>
+        <div class="icon-slider-container"> <!-- Updated container for icon and slider -->
+            <!-- Volume Icon -->
+            <i class="fas fa-volume-up" id="volumeIcon"></i>
+            <!-- Volume Slider -->
+            <input type="range" id="volumeControl" min="0" max="100" value="50">
+        </div>
+        <div id="volumeIndicator">50%</div>
         <!-- Shark Graphic (hidden initially) -->
         <div id="sharkGraphic" hidden>
             <img src="images/Shark.png" alt="Shark">
         </div>
         <!-- Play Button Container -->
-        <div class="play-button-container">
-        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
-        </div>
-        <!-- Volume Icon -->
-        <i class="fas fa-volume-up" id="volumeIcon"></i>
-        <!-- Volume Slider -->
-        <input type="range" id="volumeControl" min="0" max="100" value="50">
-        <div id="volumeIndicator">50%</div>
     </div>
     <audio id="audioPlayer" controls loop hidden>
         <source src="https://ia800509.us.archive.org/16/items/TobyFoxMegalovania/Toby%20Fox%20-%20Megalovania.mp3" type="audio/mp3">
